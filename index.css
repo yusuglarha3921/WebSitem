@@ -209,11 +209,11 @@ ul {
     width: 60%;
     max-width: 600px;
     margin: 0 auto;
-    transform: translateY(-600px);
+    transform: translateY(-550px);
     margin-left: 700px;
   }
   .example-2 {
-   transform: translateY(-50px);  
+   transform: translateY(150px);  
    margin-left: -1050px;
   }
 }
@@ -229,7 +229,7 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .profil-resmi img {
     width: 200px; /* Genişlik azaltıldı */
   }
@@ -238,15 +238,50 @@ ul {
     width: 60%;
     max-width: 400px;
   }
+  .container{
+    width: 100%;
+  }
 }
 
-@media (max-width: 480px) {
-  .profil-resmi img {
-    width: 150px; /* Genişlik azaltıldı */
+@media (max-width: 512px) {
+  body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 70px; /* Navbar'ın yüksekliği kadar boşluk ekle */
+      margin: 0;
+      overflow-x: hidden; /* Sağ kaymayı önle */
   }
-  
+
+  .profil-resmi img {
+      width: 150px; /* Daha küçük ekranlar için genişlik azaltıldı */
+      margin-left: 0;
+  }
+
+  .container {
+      width: 100%; /* Ekran genişliğine göre uygun hale getirildi */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
   .card {
-    width: 50%;
-    max-width: 300px;
+      width: 80%; /* Küçük ekranlar için daha uygun genişlik */
+      margin-top: 20px; /* Sayfanın ortasında görünmesi için */
+      margin-left: 10px;
+  }
+
+  .example-2 {
+      display: flex;
+      justify-content: center; /* Ortalamak için */
+      gap: 10px;
+      margin-top: 20px; /* Sosyal medya ikonlarını aşağıda göster */
+      transform: translateY(30); /* Konumlandırmayı sıfırladık */
+      width: auto; /* Genişlik ayarı otomatik olarak yapıldı */
+  }
+
+  .example-2 .icon-content a {
+      width: 40px; /* Küçük ekranlar için sosyal medya ikonlarının boyutları küçültüldü */
+      height: 40px;
   }
 }
